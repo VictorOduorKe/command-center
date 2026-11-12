@@ -97,3 +97,70 @@ The entire Kali Linux desktop is managed through a unified configuration model:
 - Configured in `~/.config/conky/victor-cyberpunk.conkyrc`.
 - Automatically launched on desktop login via `~/.config/autostart/victor-conky.desktop`.
 - Reads real system statistics from Linux kernel `/proc/stat`, `/proc/meminfo`, `/proc/net/dev`, and thermal sensors.
+
+
+---
+
+## Linux Application Manager (Section 13)
+
+Located in Tab 8 of Victor Command Center (`src/app_manager.py` & `src/app_manager_ui.py`).
+
+### Capabilities & Navigation:
+1. **Installed Applications View**:
+   - Live query of system APT/dpkg database and installed Flatpaks/Snaps.
+   - Real-time search by package name, category, or summary.
+   - Filter by Category (Security Tools, System Utilities, Development, Networking, Databases, Libraries, Flatpaks).
+   - Filter by Source (APT / dpkg, Flatpak, Snap).
+   - Sort by Name (A-Z, Z-A), Size (Largest, Smallest), or Upgradable status.
+   - **Inspect Details**: Double-click or click `INSPECT DETAILS` to view maintainer, architecture, full upstream description, direct dependencies, and reverse dependencies.
+   - **Safe Uninstall**: Click `SAFE UNINSTALL` to open the defensive uninstallation dialog.
+
+2. **Application Discovery & Health View**:
+   - **Orphaned Dependencies**: Auto-installed packages with no reverse dependencies (`apt autoremove` candidates). Click `Remove` or `CLEAN ALL SAFE ORPHANS` with preview.
+   - **Potentially Unused Applications**: Evidence-based detection of residual configuration packages (`rc` state), orphaned libraries, and inactive unbooted Linux kernels.
+
+3. **Package History & Audit Log View**:
+   - Parses `/var/log/apt/history.log*` with complete start/end timestamps, commands, affected packages, and statuses.
+   - Confidential arguments and passwords are automatically sanitized.
+   - Filter by action type (`INSTALL`, `UPGRADE`, `REMOVE`, `PURGE`).
+
+4. **Safety Safeguards & Essential Package Protection**:
+   - Before any removal, `ApplicationManager` executes simulated removal (`apt-get -s remove`).
+   - Essential system packages (`libc6`, `systemd`, `coreutils`, `bash`, `xorg`, `xfce4`, `network-manager`, etc.) are **strictly blocked from removal**.
+   - High-impact removals (such as core metapackages like `kali-linux-default`) require explicit safety review, checkbox confirmation, and typing `REMOVE` into an unlocking input box.
+
+---
+
+## Defensive Security & Vulnerability Center (Section 14)
+
+Located in Tab 9 of Victor Command Center (`src/security_center.py` & `src/security_center_ui.py`).
+
+### Capabilities & Navigation:
+1. **Security Overview Dashboard**:
+   - **Posture Grade & Risk Index**: Displays letter grade (Grade A through F) and composite risk index computed via documented methodology.
+   - **Severity Counts**: Critical, High, Medium, Low, Outdated, and Known Vulnerable package metrics.
+   - **Repo Sync & Update Timestamps**: Shows last database sync and security update timestamps.
+   - **Quick Actions**: `RUN SECURITY SCAN`, `SAFETY PRE-CHECKS`, `EXPORT HTML AUDIT REPORT`, `EXPORT JSON AUDIT`.
+
+2. **Vulnerabilities & CVEs View**:
+   - Interactive table of detected CVEs and security advisories from Debian Security Tracker and Kali advisories.
+   - Color-coded severity badges (`CRITICAL`, `HIGH`, `MEDIUM`, `LOW`).
+   - Detailed Inspector: Title, Category, Source, Description, System Evidence, and Clickable Advisory URL.
+   - **Remediation Options**:
+     - *Update*: Displays target version and switches to Patch Management.
+     - *Remove*: Launches defensive uninstallation workflow.
+     - *Defer / Mark Resolved*: Allows documenting deferred or resolved findings.
+
+3. **System Hardening & Exposure Audit View**:
+   - **Kernel Security**: Identifies installed unbooted kernels consuming storage.
+   - **Network Sockets**: Detects daemons listening on wildcard interfaces (`0.0.0.0` or `[::]`).
+   - **File Permissions**: Inspects `/etc/shadow`, `/etc/passwd`, `/etc/sudoers`, `/tmp` sticky bit.
+   - **Sysctl Parameters**: Verifies ASLR (`kernel.randomize_va_space`) and IPv4 packet forwarding (`net.ipv4.ip_forward`).
+
+4. **Patch Management & Safety Engine**:
+   - **Safety Pre-conditions**: Verifies >= 1.0 GB free disk space in root filesystem, verifies no package manager lock is held, and verifies dpkg database consistency (`dpkg --audit`).
+   - **Execution Plan Preview**: Selectable candidate security patches with simulated command preview.
+   - **Verification Rescan**: Rescans the system after patching to confirm resolution.
+
+5. **Security Reporting**:
+   - Generates standalone, styled Cyberpunk Green HTML reports (`~/victor_security_audit_report.html`) and structured JSON dumps.

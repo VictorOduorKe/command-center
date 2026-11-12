@@ -39,6 +39,8 @@ sys.path.insert(0, str(VCC_DIR / "src"))
 from config import load_config, save_config, create_backup, restore_backup
 from desktop_integrator import apply_full_desktop_theme, PRESET_PROFILES
 from restore import get_baseline_source, restore_factory_desktop
+from app_manager import ApplicationManager
+from security_center import SecurityCenter
 
 RESULTS = []
 
@@ -181,6 +183,26 @@ def test_12_desktop_responsiveness():
            "Conky consumes ~14 MB RAM (< 0.2% of 8 GB RAM), zero compositing lag, fast HDD load")
 
 
+def test_13_application_manager():
+    mgr = ApplicationManager()
+    pkgs = mgr.get_installed_packages()
+    prev = mgr.preview_uninstallation(["libc6"])
+    history = mgr.get_package_history()
+    passed = len(pkgs) > 1000 and prev["is_blocked"] is True and len(history) > 0
+    record(13, "Linux Application Manager (Real APT/dpkg & Flatpak)", passed,
+           f"{len(pkgs)} real packages, {len(history)} history logs, essential safeguards active")
+
+
+def test_14_security_center():
+    sec = SecurityCenter()
+    findings = sec.run_assessment()
+    overview = sec.get_security_overview()
+    safety = sec.check_safety_preconditions()
+    passed = len(findings) > 0 and overview["risk_score"] > 0 and safety["disk_space_ok"]
+    record(14, "Security & Vulnerability Center (CVE & Posture)", passed,
+           f"Risk Score {overview['risk_score']} ({overview['posture_grade']}), {len(findings)} findings, {overview['outdated_packages_count']} outdated pkgs")
+
+
 def run_all():
     print("=" * 75)
     print(" VICTOR CYBERPUNK XFCE DESKTOP — VERIFICATION SUITE ")
@@ -197,6 +219,8 @@ def run_all():
     test_10_theme_persistence()
     test_11_factory_restore()
     test_12_desktop_responsiveness()
+    test_13_application_manager()
+    test_14_security_center()
     print("=" * 75)
     total_passed = sum(1 for r in RESULTS if r["status"] == "PASSED")
     print(f"SUMMARY: {total_passed}/{len(RESULTS)} Desktop Acceptance Tests Passed.")

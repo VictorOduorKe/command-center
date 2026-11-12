@@ -32,6 +32,8 @@ from config import (
 )
 from restore import restore_factory_desktop, uninstall_command_center
 from desktop_integrator import apply_full_desktop_theme, PRESET_PROFILES
+from app_manager_ui import AppManagerTab
+from security_center_ui import SecurityCenterTab
 
 
 class VictorCommandCenter(QWidget):
@@ -125,6 +127,14 @@ class VictorCommandCenter(QWidget):
         self.tab_restore = QWidget()
         self.init_restore_tab()
         self.tabs.addTab(self.tab_restore, "BACKUPS & RESTORE")
+
+        # Tab 8: Linux Application Manager
+        self.tab_apps = AppManagerTab(self)
+        self.tabs.addTab(self.tab_apps, "APPLICATION MANAGER")
+
+        # Tab 9: Defensive Security & Vulnerabilities
+        self.tab_security = SecurityCenterTab(self)
+        self.tabs.addTab(self.tab_security, "SECURITY & CVES")
 
         main_layout.addWidget(self.tabs, stretch=1)
 
