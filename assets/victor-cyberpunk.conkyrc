@@ -1,0 +1,67 @@
+conky.config = {
+    alignment = 'top_right',
+    background = false,
+    border_width = 1,
+    cpu_avg_samples = 2,
+    default_color = '#D6E5DF',
+    default_outline_color = '#D6E5DF',
+    default_shade_color = '#080C0B',
+    color1 = '#39FF88', -- Neon Green
+    color2 = '#00D9FF', -- Electric Cyan
+    color3 = '#82948C', -- Muted Slate
+    double_buffer = true,
+    draw_borders = true,
+    draw_graph_borders = true,
+    draw_outline = false,
+    draw_shades = false,
+    extra_newline = false,
+    font = 'FiraCode:size=9',
+    gap_x = 20,
+    gap_y = 50,
+    minimum_height = 420,
+    minimum_width = 330,
+    maximum_width = 330,
+    net_avg_samples = 2,
+    no_buffers = true,
+    out_to_console = false,
+    out_to_ncurses = false,
+    out_to_stderr = false,
+    out_to_x = true,
+    own_window = true,
+    own_window_class = 'Conky',
+    own_window_type = 'desktop',
+    own_window_colour = '#E0080C0B',
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    show_graph_range = false,
+    show_graph_scale = false,
+    stippled_borders = 0,
+    update_interval = 1.5,
+    uppercase = false,
+    use_spacer = 'none',
+    use_xft = true,
+}
+
+conky.text = [[
+${color1}┌──[ VICTOR COMMAND CENTER // SYSTEM HUD ]──┐${color}
+${color2}│ IDENTITY:${color} Victor Oduor
+${color3}│ ROLE:${color} Software Developer & ICT Professional
+${color3}│ INST:${color} Technical University of Mombasa
+${color1}├──[ HARDWARE & TELEMETRY ]─────────────────┤${color}
+${color2}│ CPU MODEL:${color} ${exec grep -m1 "model name" /proc/cpuinfo | cut -d: -f2 | xargs}
+${color2}│ CPU LOAD:${color} ${cpu cpu0}% ${color1}${cpubar cpu0 6,170}${color}
+${color2}│ CPU TEMP:${color} ${exec cat /sys/class/thermal/thermal_zone0/temp 2>/dev/null | awk '{printf "%.1f °C", $1/1000}' || echo "N/A"}
+${color1}${cpugraph 26,310 00D9FF 39FF88}${color}
+${color2}│ MEMORY:${color}   ${mem} / ${memmax} (${memperc}%)
+${color1}│${color}           ${color2}${membar 6,240}${color}
+${color2}│ STORAGE:${color}  ${fs_used /} / ${fs_size /} (${fs_used_perc /}%)
+${color1}│${color}           ${color1}${fs_bar 6,240 /}${color}
+${color1}├──[ NETWORK & TRAFFIC ]────────────────────┤${color}
+${color2}│ INTERFACE:${color} ${gw_iface} [ACTIVE]
+${color2}│ DOWNLOAD:${color}  ${downspeed} ${color2}${downspeedgraph 16,140 00D9FF 39FF88}${color}
+${color2}│ UPLOAD:${color}    ${upspeed} ${color1}${upspeedgraph 16,140 39FF88 00D9FF}${color}
+${color1}├──[ SYSTEM STATUS ]────────────────────────┤${color}
+${color3}│ OS / KERNEL:${color} Kali Rolling // $kernel
+${color3}│ UPTIME:${color}      $uptime
+${color3}│ TIME:${color}        ${color1}${time %a %b %d // %H:%M:%S}${color}
+${color1}└──[ STATUS: ONLINE // SECURE // XFCE4 ]────┘${color}
+]]

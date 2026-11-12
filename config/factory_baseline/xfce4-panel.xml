@@ -1,0 +1,376 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<channel name="xfce4-panel" version="1.0">
+  <property name="configver" type="int" value="2"/>
+  <property name="panels" type="array">
+    <value type="int" value="1"/>
+    <value type="int" value="2"/>
+    <property name="panel-1" type="empty">
+      <property name="background-rgba" type="array">
+        <value type="double" value="0.11333333333333334"/>
+        <value type="double" value="0.11333333333333334"/>
+        <value type="double" value="0.11333333333333334"/>
+        <value type="double" value="1"/>
+      </property>
+      <property name="background-style" type="uint" value="1"/>
+      <property name="length" type="uint" value="100"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="29"/>
+        <value type="int" value="25"/>
+        <value type="int" value="26"/>
+        <value type="int" value="7"/>
+        <value type="int" value="12"/>
+        <value type="int" value="32"/>
+        <value type="int" value="13"/>
+        <value type="int" value="14"/>
+        <value type="int" value="15"/>
+        <value type="int" value="16"/>
+        <value type="int" value="17"/>
+        <value type="int" value="18"/>
+        <value type="int" value="2"/>
+        <value type="int" value="22"/>
+        <value type="int" value="33"/>
+      </property>
+      <property name="position" type="string" value="p=6;x=0;y=0"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="size" type="uint" value="34"/>
+    </property>
+    <property name="panel-2" type="empty">
+      <property name="background-rgba" type="array">
+        <value type="double" value="0.11333333333333334"/>
+        <value type="double" value="0.11333333333333334"/>
+        <value type="double" value="0.11333333333333334"/>
+        <value type="double" value="1"/>
+      </property>
+      <property name="background-style" type="uint" value="1"/>
+      <property name="length" type="double" value="100"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="24"/>
+        <value type="int" value="30"/>
+        <value type="int" value="34"/>
+        <value type="int" value="23"/>
+        <value type="int" value="28"/>
+      </property>
+      <property name="position" type="string" value="p=8;x=102;y=1405"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="size" type="uint" value="34"/>
+    </property>
+  </property>
+  <property name="plugins" type="empty">
+    <property name="plugin-12" type="string" value="separator">
+      <property name="expand" type="bool" value="true"/>
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-13" type="string" value="cpugraph">
+      <property name="background" type="array">
+        <value type="double" value="1"/>
+        <value type="double" value="1"/>
+        <value type="double" value="1"/>
+        <value type="double" value="0"/>
+      </property>
+      <property name="bars" type="int" value="1"/>
+      <property name="bars-color" type="array">
+        <value type="double" value="1"/>
+        <value type="double" value="0.47058823529411764"/>
+        <value type="double" value="0"/>
+        <value type="double" value="1"/>
+      </property>
+      <property name="border" type="int" value="0"/>
+      <property name="color-mode" type="int" value="1"/>
+      <property name="command" type="string" value=""/>
+      <property name="foreground-1" type="array">
+        <value type="double" value="0.8784313725490196"/>
+        <value type="double" value="0.10588235294117647"/>
+        <value type="double" value="0.14117647058823529"/>
+        <value type="double" value="1"/>
+      </property>
+      <property name="foreground-2" type="array">
+        <value type="double" value="1"/>
+        <value type="double" value="0.47058823529411764"/>
+        <value type="double" value="0"/>
+        <value type="double" value="1"/>
+      </property>
+      <property name="foreground-3" type="array">
+        <value type="double" value="0"/>
+        <value type="double" value="0"/>
+        <value type="double" value="1"/>
+        <value type="double" value="1"/>
+      </property>
+      <property name="foreground-iowait" type="array">
+        <value type="double" value="0.20000000000000001"/>
+        <value type="double" value="0.90000000000000002"/>
+        <value type="double" value="0.40000000000000002"/>
+        <value type="double" value="1"/>
+      </property>
+      <property name="foreground-nice" type="array">
+        <value type="double" value="0.90000000000000002"/>
+        <value type="double" value="0.80000000000000004"/>
+        <value type="double" value="0.20000000000000001"/>
+        <value type="double" value="1"/>
+      </property>
+      <property name="foreground-system" type="array">
+        <value type="double" value="0.90000000000000002"/>
+        <value type="double" value="0.10000000000000001"/>
+        <value type="double" value="0.10000000000000001"/>
+        <value type="double" value="1"/>
+      </property>
+      <property name="foreground-user" type="array">
+        <value type="double" value="0.10000000000000001"/>
+        <value type="double" value="0.40000000000000002"/>
+        <value type="double" value="0.90000000000000002"/>
+        <value type="double" value="1"/>
+      </property>
+      <property name="frame" type="int" value="0"/>
+      <property name="in-terminal" type="int" value="1"/>
+      <property name="load-threshold" type="int" value="0"/>
+      <property name="mode" type="int" value="1"/>
+      <property name="per-core" type="int" value="0"/>
+      <property name="per-core-spacing" type="int" value="1"/>
+      <property name="size" type="int" value="128"/>
+      <property name="smt-issues" type="int" value="0"/>
+      <property name="smt-issues-color" type="array">
+        <value type="double" value="0.90000000000000002"/>
+        <value type="double" value="0"/>
+        <value type="double" value="0"/>
+        <value type="double" value="1"/>
+      </property>
+      <property name="smt-stats" type="int" value="0"/>
+      <property name="startup-notification" type="int" value="0"/>
+      <property name="time-scale" type="int" value="0"/>
+      <property name="tracked-core" type="int" value="0"/>
+      <property name="update-interval" type="int" value="0"/>
+    </property>
+    <property name="plugin-14" type="string" value="systray">
+      <property name="known-legacy-items" type="array">
+        <value type="string" value="wi-fi network connection “airtel_x25a_045a_5g” active: airtel_x25a_045a_5g (85%)"/>
+        <value type="string" value="wi-fi network connection “airtel_x25a_045a_5g” active: airtel_x25a_045a_5g (82%)"/>
+        <value type="string" value="wi-fi network connection “airtel_x25a_045a_5g” active: airtel_x25a_045a_5g (80%)"/>
+        <value type="string" value="wi-fi network connection “airtel_x25a_045a_5g” active: airtel_x25a_045a_5g (83%)"/>
+        <value type="string" value="wi-fi network connection “airtel_x25a_045a_5g” active: airtel_x25a_045a_5g (90%)"/>
+        <value type="string" value="wi-fi network connection “airtel_x25a_045a_5g” active: airtel_x25a_045a_5g (89%)"/>
+        <value type="string" value="user authentication required for wi-fi network “airtel_x25a_045a_5g”…"/>
+        <value type="string" value="wi-fi network connection “alpha” active: alpha (98%)"/>
+        <value type="string" value="wi-fi network connection “alpha” active: alpha (100%)"/>
+        <value type="string" value="wi-fi network connection “home 5” active: home 5 (63%)"/>
+        <value type="string" value="task manager"/>
+        <value type="string" value="wi-fi network connection “home 5” active: home 5 (68%)"/>
+        <value type="string" value="wi-fi network connection “home 5” active: home 5 (65%)"/>
+        <value type="string" value="wi-fi network connection “home 5” active: home 5 (71%)"/>
+        <value type="string" value="wi-fi network connection “home5g” active: home5g (71%)"/>
+        <value type="string" value="wi-fi network connection “home5g” active: home5g (70%)"/>
+        <value type="string" value="wi-fi network connection “home5g” active: home5g (60%)"/>
+        <value type="string" value="wi-fi network connection “home5g” active: home5g (62%)"/>
+        <value type="string" value="configuring wi-fi network connection “home5g”…"/>
+        <value type="string" value="wi-fi network connection “guest 3” active: guest (87%)"/>
+        <value type="string" value="wi-fi network connection “steveharvey wifi 0793883832” active: steveharvey wifi 0793883832 (67%)"/>
+        <value type="string" value="wi-fi network connection “guest 2” active: guest (65%)"/>
+        <value type="string" value="wi-fi network connection “guest 2” active: guest (76%)"/>
+        <value type="string" value="wi-fi network connection “steveharvey wifi 0793883832” active: steveharvey wifi 0793883832 (69%)"/>
+        <value type="string" value="wi-fi network connection “steveharvey wifi 0793883832” active: steveharvey wifi 0793883832 (65%)"/>
+        <value type="string" value="wi-fi network connection “guest 4” active: guest (76%)"/>
+        <value type="string" value="wi-fi network connection “steveharvey wifi 0793883832” active: steveharvey wifi 0793883832 (66%)"/>
+        <value type="string" value="wi-fi network connection “steveharvey wifi 0793883832” active: steveharvey wifi 0793883832 (72%)"/>
+        <value type="string" value="wi-fi network connection “steveharvey wifi 0793883832” active: steveharvey wifi 0793883832 (63%)"/>
+        <value type="string" value="wi-fi network connection “guest 8” active: guest (85%)"/>
+        <value type="string" value="wi-fi network connection “guest 8” active: guest (77%)"/>
+        <value type="string" value="no network connection"/>
+        <value type="string" value="wi-fi network connection “smart com 5g” active: smart com 5g (25%)"/>
+        <value type="string" value="wi-fi network connection “konnect” active: konnect (84%)"/>
+        <value type="string" value="wi-fi network connection “steveharvey wifi 0793883832” active: steveharvey wifi 0793883832 (62%)"/>
+        <value type="string" value="wi-fi network connection “guest 7” active: guest (92%)"/>
+        <value type="string" value="wi-fi network connection “konnect” active: konnect (56%)"/>
+        <value type="string" value="wi-fi network connection “guest 3” active: guest (78%)"/>
+        <value type="string" value="wi-fi network connection “konnect” active: konnect (77%)"/>
+        <value type="string" value="wi-fi network connection “konnect” active: konnect (76%)"/>
+        <value type="string" value="wi-fi network connection “konnect” active: konnect (45%)"/>
+        <value type="string" value="configuring wi-fi network connection “m&amp;m horsport 056”…"/>
+        <value type="string" value="wi-fi network connection “finalauto” active: finalauto (43%)"/>
+        <value type="string" value="wi-fi network connection “guest 1” active: guest (79%)"/>
+        <value type="string" value="requesting a wi-fi network address for “konnect”…"/>
+        <value type="string" value="wi-fi network connection “guest 1” active: guest (96%)"/>
+        <value type="string" value="ethernet network connection “wired connection 2” active"/>
+        <value type="string" value="wi-fi network connection “home5g” active: home5g (93%)"/>
+        <value type="string" value="wi-fi network connection “home5g” active: home5g (77%)"/>
+        <value type="string" value="wi-fi network connection “home5g” active: home5g (83%)"/>
+        <value type="string" value="wi-fi network connection “home5g” active: home5g (85%)"/>
+        <value type="string" value="anydesk"/>
+        <value type="string" value="wi-fi network connection “home5g” active: home5g (81%)"/>
+        <value type="string" value="wi-fi network connection “home5g” active: home5g (80%)"/>
+        <value type="string" value="wi-fi network connection “home5g” active: home5g (86%)"/>
+        <value type="string" value="polkit-mate-authentication-agent-1"/>
+        <value type="string" value="wi-fi network connection “home5g” active: home5g (82%)"/>
+        <value type="string" value="wi-fi network connection “home5g” active: home5g (79%)"/>
+        <value type="string" value="wi-fi network connection “alpha” active: alpha (84%)"/>
+        <value type="string" value="wi-fi network connection “alpha” active: alpha (87%)"/>
+        <value type="string" value="wi-fi network connection “alpha” active: alpha (90%)"/>
+        <value type="string" value="wi-fi network connection “home5g” active: home5g (90%)"/>
+        <value type="string" value="wi-fi network connection “home5g” active: home5g (87%)"/>
+        <value type="string" value="wi-fi network connection “home5g” active: home5g (84%)"/>
+        <value type="string" value="wi-fi network connection “home5g” active: home5g (89%)"/>
+        <value type="string" value="wi-fi network connection “home5g” active: home5g (88%)"/>
+        <value type="string" value="networkmanager applet"/>
+        <value type="string" value="onboard"/>
+        <value type="string" value="ethernet network connection “wired connection 1” active"/>
+      </property>
+      <property name="size-max" type="uint" value="22"/>
+      <property name="square-icons" type="bool" value="true"/>
+      <property name="symbolic-icons" type="bool" value="false"/>
+      <property name="known-items" type="array">
+        <value type="string" value="DrbZT8qSHL"/>
+        <value type="string" value="_7plvbDw_X"/>
+        <value type="string" value="9q5yWbT8AY"/>
+        <value type="string" value="fGfk8kTn3P"/>
+        <value type="string" value="YJfKOfvmgS"/>
+        <value type="string" value="jtWvVSTwc6"/>
+        <value type="string" value="r7dbTaqWYp"/>
+        <value type="string" value="yLYgMeU-31"/>
+        <value type="string" value="ro_a2Q6XlG"/>
+        <value type="string" value="_HaPt4Lr3Z"/>
+        <value type="string" value="eS25k5gC2b"/>
+        <value type="string" value="c5LZWDK_62"/>
+        <value type="string" value="uiJasCsBjc"/>
+        <value type="string" value="dXdlCxBuoZ"/>
+        <value type="string" value="MJyO7LjUhV"/>
+        <value type="string" value="RjSE9rwlTo"/>
+        <value type="string" value="Uual71Frsa"/>
+        <value type="string" value="KjrRhBCwWD"/>
+        <value type="string" value="8mdsPXojCp"/>
+        <value type="string" value="yVB5f4cE9n"/>
+        <value type="string" value="8ra3r9uOwq"/>
+        <value type="string" value="artcraft-launcher"/>
+        <value type="string" value="431018-1"/>
+        <value type="string" value="ShTfBlS5ZK"/>
+        <value type="string" value="droidcam"/>
+        <value type="string" value="obs"/>
+        <value type="string" value="9HNLuL79o1"/>
+        <value type="string" value="MI7AcFId54"/>
+        <value type="string" value="UpoITVmGPx"/>
+        <value type="string" value="1qlbBb-mPC"/>
+        <value type="string" value="mkwSoBLIbn"/>
+        <value type="string" value="nQkkVxUh7i"/>
+        <value type="string" value="ZdYJgMZ8EX"/>
+        <value type="string" value="TwXHs3y6is"/>
+        <value type="string" value="wgGuZP_AMN"/>
+        <value type="string" value="a-Zo-13TwS"/>
+        <value type="string" value="VRK1YlIjao"/>
+        <value type="string" value="My9tlpBE23"/>
+        <value type="string" value="khWKMgbqX8"/>
+        <value type="string" value="Spf5rgOcze"/>
+        <value type="string" value="DgkkaFJj8v"/>
+        <value type="string" value="owTgIaZhys"/>
+        <value type="string" value="Xw__mdDCkW"/>
+        <value type="string" value="ava-WK5QMY"/>
+        <value type="string" value="29QSdw2qY8"/>
+        <value type="string" value="9xWdzLwJop"/>
+        <value type="string" value="xwvUY3H6AU"/>
+        <value type="string" value="cRwuLyyM4H"/>
+        <value type="string" value="Antigravity_status_icon_1"/>
+        <value type="string" value="c7aK2t9dSj"/>
+        <value type="string" value="blueman"/>
+        <value type="string" value="4UAPbucmwN"/>
+        <value type="string" value="85wVYHPXeX"/>
+        <value type="string" value="sQYzutRuKd"/>
+        <value type="string" value="3E8SZMyX7P"/>
+        <value type="string" value="Z1RN6INE6Y"/>
+        <value type="string" value="izIC_KqLAY"/>
+        <value type="string" value="o7x5L3FgBu"/>
+        <value type="string" value="OOSxOJu1No"/>
+        <value type="string" value="ZqzYZvPcD-"/>
+        <value type="string" value="DfjAaRJdU6"/>
+        <value type="string" value="DLRtMmLbG8"/>
+        <value type="string" value="RKwNGjf6zc"/>
+        <value type="string" value="TelegramDesktop"/>
+        <value type="string" value="vlc"/>
+        <value type="string" value="x-GtFhU9GA"/>
+        <value type="string" value="FwCm4I25Si"/>
+        <value type="string" value="pBUwHDJiaU"/>
+        <value type="string" value="TeamViewer"/>
+        <value type="string" value="1AmreiUiNc"/>
+        <value type="string" value="fv9dLbJeZT"/>
+        <value type="string" value="j2-2krg7a8"/>
+        <value type="string" value="aTrY9zIrNc"/>
+        <value type="string" value="o1YsvQJTPe"/>
+        <value type="string" value="OEobwKWTaB"/>
+        <value type="string" value="AAwULbMMJT"/>
+        <value type="string" value="88T3k9iAG_"/>
+        <value type="string" value="zECu3Ihyn_"/>
+        <value type="string" value="5k6xJdwzP2"/>
+      </property>
+    </property>
+    <property name="plugin-15" type="string" value="genmon">
+      <property name="command" type="string" value="/usr/share/kali-themes/xfce4-panel-genmon-vpnip.sh"/>
+      <property name="enable-single-row" type="bool" value="true"/>
+      <property name="font" type="string" value="Fira Code Medium 8"/>
+      <property name="text" type="string" value="(genmon)"/>
+      <property name="update-period" type="int" value="1000"/>
+      <property name="use-label" type="bool" value="false"/>
+    </property>
+    <property name="plugin-16" type="string" value="pulseaudio">
+      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+      <property name="known-players" type="string" value="Antigravity;Brave;org.telegram.desktop._1807f630f8b2896531edcdb5ffb9fddd;vlc"/>
+    </property>
+    <property name="plugin-17" type="string" value="notification-plugin"/>
+    <property name="plugin-18" type="string" value="power-manager-plugin"/>
+    <property name="plugin-2" type="string" value="clock">
+      <property name="digital-date-font" type="string" value="Cantarell 11"/>
+      <property name="digital-date-format" type="string" value="%a %b %d,%l:%M %p"/>
+      <property name="digital-layout" type="uint" value="2"/>
+      <property name="digital-time-format" type="string" value="%a %b  %d, %l:%M %p"/>
+    </property>
+    <property name="plugin-22" type="string" value="actions">
+      <property name="appearance" type="uint" value="0"/>
+      <property name="items" type="array">
+        <value type="string" value="-lock-screen"/>
+        <value type="string" value="-switch-user"/>
+        <value type="string" value="-separator"/>
+        <value type="string" value="-suspend"/>
+        <value type="string" value="-hibernate"/>
+        <value type="string" value="-hybrid-sleep"/>
+        <value type="string" value="-separator"/>
+        <value type="string" value="-shutdown"/>
+        <value type="string" value="-restart"/>
+        <value type="string" value="-separator"/>
+        <value type="string" value="+logout"/>
+        <value type="string" value="-logout-dialog"/>
+      </property>
+    </property>
+    <property name="plugin-23" type="string" value="pager"/>
+    <property name="plugin-24" type="string" value="showdesktop"/>
+    <property name="plugin-25" type="string" value="places">
+      <property name="show-button-type" type="int" value="1"/>
+    </property>
+    <property name="plugin-26" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-28" type="string" value="thunar-tpa"/>
+    <property name="plugin-29" type="string" value="applicationsmenu">
+      <property name="button-icon" type="string" value="kali-panel-menu"/>
+      <property name="button-title" type="string" value="  Applications  "/>
+      <property name="small" type="bool" value="false"/>
+    </property>
+    <property name="plugin-30" type="string" value="tasklist">
+      <property name="flat-buttons" type="bool" value="false"/>
+      <property name="show-handle" type="bool" value="true"/>
+    </property>
+    <property name="plugin-32" type="string" value="separator">
+      <property name="expand" type="bool" value="true"/>
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-33" type="string" value="separator">
+      <property name="expand" type="bool" value="true"/>
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-34" type="string" value="separator">
+      <property name="expand" type="bool" value="true"/>
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-7" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="17658871703.desktop"/>
+        <value type="string" value="17658871704.desktop"/>
+        <value type="string" value="17658871705.desktop"/>
+      </property>
+      <property name="move-first" type="bool" value="true"/>
+    </property>
+  </property>
+</channel>
